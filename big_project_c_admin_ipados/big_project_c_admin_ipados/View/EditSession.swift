@@ -121,26 +121,6 @@ struct EditSessionView: View {
                             TextField("제목 및 부제목", text: $name)
                         }
                     }
-                    
-                    //MARK: - 이미지 URL
-                    //                    VStack(alignment: .leading) {
-                    //                        Text("대표 이미지")
-                    //                            .font(.title2)
-                    //                            .fontWeight(.bold)
-                    //
-                    //                        HStack(spacing: 50) {
-                    //                            Text("이미지 URL을 입력해주세요")
-                    //                                .font(.callout)
-                    //
-                    //                            TextField("URL 주소", text: $image)
-                    //
-                    //                            AsyncImage(url: URL(string: image), transaction: transaction, content: imageView)
-                    //                                .frame(width: 100, height: 100)
-                    //
-                    //                        }
-                    //                    }
-                    
-                    
                     //MARK: - 이미지 피커
                     VStack (alignment: .leading)  {
                         Text("대표 이미지")
@@ -187,7 +167,6 @@ struct EditSessionView: View {
                         
                     }
                     
-                    
                     //MARK: - datePicker
                     VStack(alignment: .leading) {
                         
@@ -208,7 +187,6 @@ struct EditSessionView: View {
                             }
                             .labelsHidden()
                             
-                            
                             Spacer()
                             
                             HStack {
@@ -225,7 +203,6 @@ struct EditSessionView: View {
                             }
                         }
                     }
-                    
                     
                     //MARK: - categoryPicker
                     VStack(alignment: .leading) {
@@ -247,7 +224,6 @@ struct EditSessionView: View {
                         }
                     }
                     
-                    
                     // MARK: - Place
                     VStack(alignment: .leading) {
                         
@@ -268,7 +244,6 @@ struct EditSessionView: View {
                             TextField("주소", text: $locationUrl)
                         }
                     }
-                    
                     
                     // MARK: - HostInfo ( 호스트 인포 - 프로필 사진, 강사소개)
                     VStack(alignment: .leading) {
@@ -331,7 +306,6 @@ struct EditSessionView: View {
                 }
                     
                     
-                    
                     // MARK: - 세미나 상세내용
                     VStack(alignment: .leading) {
                         Text("세미나 상세 내용")
@@ -371,18 +345,13 @@ struct EditSessionView: View {
                         }
                     }
                     .padding(.vertical, 20)
-                    
-                    
-                    
-                    
+                       
                     // MARK: - 세미나 등록하기 버튼 추가 (데이터)
                     VStack(alignment: .trailing) {
                         Button {
                             let id = UUID().uuidString
                             
                             seminarStore.editSeminar(seminar: Seminar(id: seminar.id,  image: [image], name: name, date: date, startingTime: startingTime, endingTime: endingTime, category: selectedCategory, location: location, locationUrl: locationUrl, hostName: hostName, hostImage: hostImage, hostIntroduction: hostIntroduce, seminarDescription: seminarDescription, seminarCurriculum: seminarCurriculum), selectedImages: selectedImages, selectedHostImage: selectedImage)
-                            
-                            
                             
                             dismiss()
                             
@@ -400,8 +369,7 @@ struct EditSessionView: View {
                         }
                         .cornerRadius(10)
                     }
-                    
-                    
+
                 }
                 
             }

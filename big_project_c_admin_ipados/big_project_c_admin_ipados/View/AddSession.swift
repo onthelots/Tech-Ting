@@ -68,10 +68,7 @@ struct AddSessionView: View {
     // MARK: - seminarDescription, seminarCurriculum (세미나 상세내용, 상세 커리큘럼)
     @State private var seminarDescription: String = ""
     @State private var seminarCurriculum: String = ""
-    
-    
-    
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView(showsIndicators: false) {
@@ -343,10 +340,7 @@ struct AddSessionView: View {
                     }
                 }
                 .padding(.vertical, 20)
-                
-                
-                
-                
+                            
                 // MARK: - 세미나 등록하기 버튼 추가 (데이터)
                 VStack(alignment: .center) {
                     Button {
@@ -406,7 +400,6 @@ private func imageView(for phase: AsyncImagePhase) -> some View {
             .foregroundColor(.gray)
     }
 }
-
 
 struct AddSessionView_Previews: PreviewProvider {
     static var previews: some View {
